@@ -54,7 +54,7 @@ export default function Camera() {
     setMessage("");
 
     try {
-      const uploadRes = await axios.post(`http://${import.meta.env.VITE_EXPRESS_API}/api/upload/camera`, {
+      const uploadRes = await axios.post(`${import.meta.env.VITE_EXPRESS_API}/api/upload/camera`, {
         imgData: imageSrc,
       });
 

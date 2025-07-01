@@ -47,7 +47,7 @@ export default function Upload() {
     try {
       setLoading(true);
       const uploadRes = await axios.post(
-        `http://${import.meta.env.VITE_EXPRESS_API}/api/upload/upload`,
+        `${import.meta.env.VITE_EXPRESS_API}/api/upload/upload`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
