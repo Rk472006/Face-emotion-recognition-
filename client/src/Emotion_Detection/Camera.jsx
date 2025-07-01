@@ -54,7 +54,7 @@ export default function Camera() {
     setMessage("");
 
     try {
-      const uploadRes = await axios.post("http://localhost:5000/api/upload/camera", {
+      const uploadRes = await axios.post(`http://${import.meta.env.VITE_EXPRESS_API}/api/upload/camera`, {
         imgData: imageSrc,
       });
 
@@ -64,8 +64,8 @@ export default function Camera() {
         return;
       }
 
-      
-      const detectRes = await axios.post("http://localhost:5000/api/emotion/from-url", {
+
+      const detectRes = await axios.post(`http://${import.meta.env.VITE_EXPRESS_API}/api/emotion/from-url`, {
         uid,
         imgUrl,
       });

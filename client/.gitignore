@@ -11,6 +11,7 @@ Desktop.ini
 # ========================
 # 🔧 Node.js / React (Frontend)
 # ========================
+node_modules/
 client/node_modules/
 client/dist/
 client/build/
@@ -20,7 +21,7 @@ client/.env.*.local
 client/coverage/
 client/.cache/
 client/.vite/
-
+.env
 # Yarn / npm / pnpm Logs
 logs
 *.log

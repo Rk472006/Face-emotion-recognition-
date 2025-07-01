@@ -47,7 +47,7 @@ export default function Upload() {
     try {
       setLoading(true);
       const uploadRes = await axios.post(
-        "http://localhost:5000/api/upload/upload",
+        `http://${import.meta.env.VITE_EXPRESS_API}/api/upload/upload`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -55,7 +55,7 @@ export default function Upload() {
       const imgUrl = uploadRes.data?.imgUrl;
       if (!imgUrl) throw new Error("Upload failed. No image URL returned.");
 
-      const emotionRes = await axios.post("http://localhost:5000/api/emotion/from-url", {
+      const emotionRes = await axios.post(`http://${import.meta.env.VITE_EXPRESS_API}/api/emotion/from-url`, {
         uid,
         imgUrl,
       });

@@ -14,7 +14,7 @@ router.post("/from-url", async (req, res) => {
   try {
     console.log("📤 Sending to Flask:", imgUrl);
 
-    const flaskResponse = await axios.post("http://localhost:5001/predict", {
+    const flaskResponse = await axios.post("http://https://face-emotion-recognition-1-bh1p.onrender.com/predict", {
       url: imgUrl,
     });
 

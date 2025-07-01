@@ -13,7 +13,7 @@ export default function History() {
 
   const fetchHistory = async () => {
   try {
-    const res = await axios.get(`http://localhost:5000/api/emotion/history/${uid}`);
+    const res = await axios.get(`http://${import.meta.env.VITE_EXPRESS_API}/api/emotion/history/${uid}`);
     const sorted = res.data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
     setHistory(sorted);
   } catch (err) {
