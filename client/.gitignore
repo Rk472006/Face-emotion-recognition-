@@ -1,4 +1,27 @@
-# Logs
+# ========================
+# 📁 General OS/System Files
+# ========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+.Trashes
+
+# ========================
+# 🔧 Node.js / React (Frontend)
+# ========================
+client/node_modules/
+client/dist/
+client/build/
+client/.env
+client/.env.local
+client/.env.*.local
+client/coverage/
+client/.cache/
+client/.vite/
+
+# Yarn / npm / pnpm Logs
 logs
 *.log
 npm-debug.log*
@@ -7,18 +30,62 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# ========================
+# 🐍 Python (Backend)
+# ========================
+server/__pycache__/
+server/*.py[cod]
+server/*.so
+server/*.pyd
+server/*.egg-info/
+server/venv/
+server/env/
+server/ENV/
+server/.env
+server/.vscode/
+*.sqlite3
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Editor directories and files
+# Jupyter (if ever used)
+.ipynb_checkpoints/
+
+# ========================
+# 🚀 Model Files (optional ignore)
+# Uncomment below to ignore trained model weights (if large/private)
+# model_weights.h5
+# *.h5
+# *.tflite
+# *.onnx
+# *.pt
+# *.pkl
+# *.ckpt
+# *.weights
+
+# ========================
+# 🐳 Docker (if used)
+# ========================
+*.pid
+*.pid.lock
+docker-compose.override.yml
+
+# ========================
+# 🖋️ Editor/IDE Files
+# ========================
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# ========================
+# 📦 Misc
+# ========================
+*.bak
+*.tmp
+*.log
+*.log.*
+
