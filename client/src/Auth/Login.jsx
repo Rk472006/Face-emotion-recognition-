@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
 import { toast, Toaster } from "react-hot-toast";
-import "./Login.css"; // 🔥 Import the CSS
+import "./login.css"; // 🔥 Import the CSS
 
 export default function Login() {
   const navigate = useNavigate();
