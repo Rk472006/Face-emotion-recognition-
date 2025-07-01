@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: face-emotion-flask-api
+    env: docker
+    plan: free
+    repo: https://github.com/Rk472006/Face-emotion-recognition-
+    branch: main
+    dockerfilePath: ./Dockerfile
