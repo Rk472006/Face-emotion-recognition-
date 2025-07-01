@@ -1,8 +1,7 @@
 flask
 flask-cors
-tensorflow-cpu==2.10.0
+tensorflow
 numpy
 opencv-python
 gunicorn
 pillow
-
