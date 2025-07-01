@@ -65,7 +65,7 @@ export default function Camera() {
       }
 
 
-      const detectRes = await axios.post(`http://${import.meta.env.VITE_EXPRESS_API}/api/emotion/from-url`, {
+      const detectRes = await axios.post(`${import.meta.env.VITE_EXPRESS_API}/api/emotion/from-url`, {
         uid,
         imgUrl,
       });

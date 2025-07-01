@@ -43,7 +43,7 @@ export default function Register() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const firebaseUser = userCredential.user;
 
-      await axios.post(`http://${import.meta.env.VITE_EXPRESS_API}/api/user/register`, {
+      await axios.post(`${import.meta.env.VITE_EXPRESS_API}/api/user/register`, {
         email: firebaseUser.email,
         uid: firebaseUser.uid,
       });
