@@ -1,0 +1,74 @@
+/* Navbar.css */
+
+:root {
+  --baby-blue: #68bbe3;
+  --blue-grotto: #0e86d4;
+  --blue: #055c9d;
+  --navy-blue: #003060;
+  --white: #ffffff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--navy-blue);
+  padding:  0rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+ 
+}.navbar-logo {
+  font-family: 'Bebas Neue', cursive; /* or use 'Playfair Display' for elegant serif */
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #68bbe3; /* Baby Blue */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+  color: #0e86d4; /* Blue Grotto */
+}
+
+
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navbar-links button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background: transparent;
+  border: 2px solid var(--baby-blue);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links button:hover {
+  background: var(--baby-blue);
+  color: var(--navy-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(104, 187, 227, 0.4);
+}
+
+.logout-btn {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.logout-btn:hover {
+  background: #f44336;
+  color: white;
+  border-color: #f44336;
+}

@@ -1,0 +1,127 @@
+/* camera.css */
+
+.camera-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fefefe;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  color: #34495e;
+}
+
+.method-switch {
+  margin-bottom: 1.5rem;
+}
+
+.method-switch a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #3498db;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.method-switch a:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.instructions {
+  background-color: #f0f7ff;
+  border-left: 5px solid #3498db;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.instructions h4 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.instructions li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.camera-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.camera-buttons button {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.camera-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.camera-buttons button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.captured-img {
+  margin-top: 2rem;
+}
+
+.captured-img img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #3498db;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.detected-emotion {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2c3e50;
+  background-color: #eafaf1;
+  border-left: 5px solid #2ecc71;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.detected-emotion span {
+  color: #27ae60;
+  font-weight: bold;
+}

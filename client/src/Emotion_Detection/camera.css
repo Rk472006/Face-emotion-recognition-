@@ -1,0 +1,115 @@
+.camera-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background-color: #f8f9fd;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.camera-container h1 {
+  color: #003060;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.method-switch {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.method-switch a {
+  color: #0e86d4;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.method-switch a:hover {
+  color: #055c9d;
+  text-decoration: underline;
+}
+
+.instructions {
+  text-align: left;
+  margin: 1rem auto 2rem;
+  padding: 1rem;
+  background-color: #e6f0fa;
+  border-left: 4px solid #055c9d;
+  border-radius: 8px;
+}
+
+.instructions h4 {
+  color: #003060;
+  margin-bottom: 0.5rem;
+}
+
+.instructions ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.camera-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.camera-buttons button {
+  background-color: #0e86d4;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.camera-buttons button:hover:not(:disabled) {
+  background-color: #055c9d;
+}
+
+.camera-buttons button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.captured-img {
+  margin-top: 2rem;
+}
+
+.captured-img h3 {
+  color: #003060;
+  margin-bottom: 0.5rem;
+}
+
+.captured-img img {
+  width: 320px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #68bbe3;
+  margin-top: 0.5rem;
+}
+
+.detected-emotion {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #055c9d;
+  background-color: #d3ecff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.detected-emotion span {
+  color: #d41d6d;
+  font-weight: 700;
+}
