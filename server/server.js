@@ -2,22 +2,25 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+
 const userRoutes = require("./routes/userRoutes"); 
 const uploadRoute = require("./routes/uploadRoute");
 const EmotionRoute = require("./routes/EmotionRoute");
 
-
-
 dotenv.config();
 
 const app = express();
+
 app.use(cors({
-  origin: 'http://localhost:5173',  // or "*" for all origins in development
+  origin: [
+    "http://localhost:5173",
+    "https://face-emotion-recognition-ie1i.vercel.app"
+  ],
+  credentials: true
 }));
-app.use(cors());
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // <-- add this line
-app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.send("API is running");
@@ -31,11 +34,8 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 
-
 app.use("/api/user", userRoutes);
-
 app.use("/api/emotion", EmotionRoute);
-
 app.use("/api/upload", uploadRoute);
 
 const PORT = process.env.PORT || 5000;
