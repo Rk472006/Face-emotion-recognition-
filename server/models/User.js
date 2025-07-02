@@ -37,6 +37,6 @@ const UserSchema=new mongoose.Schema({
    emotionLogs:[EmotionSchema]
 });
 const User = mongoose.model("User", UserSchema);
-const Emotion = mongoose.model("Emotion", EmotionSchema);
 
-module.exports = { User, Emotion };
+
+module.exports =  User, Emotion ;
