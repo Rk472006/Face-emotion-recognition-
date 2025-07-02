@@ -14,7 +14,7 @@ router.post("/from-url", async (req, res) => {
   try {
     console.log("📤 Sending to Flask:", imgUrl);
 
-    const flaskResponse = await axios.post("http://https://face-emotion-recognition-1-bh1p.onrender.com/predict", {
+    const flaskResponse = await axios.post("https://face-emotion-recognition-1-bh1p.onrender.com/predict", {
       url: imgUrl,
     });
 
@@ -61,7 +61,7 @@ router.get("/history/:uid", async (req, res) => {
     if (!user) {
       return res.status(404).json({ error: "User not found" });
     }
-
+    console.log(uid);
     return res.status(200).json(user.emotionLogs);
   } catch (err) {
     console.error("Error fetching emotion history:", err);
